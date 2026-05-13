@@ -1,3 +1,5 @@
+package exemplos;
+
 import java.io.*;
 
 public class ExemploConsola {

@@ -1,3 +1,5 @@
+package exemplos;
+
 import java.io.File;
 
 public class VerDir2 {
@@ -9,6 +11,8 @@ public class VerDir2 {
         archivos.length);
     for (int i = 0; i < archivos.length; i++) {
       System.out.println(archivos[i]);
+      System.out.println("É directorio?: " + archivos[i].isDirectory());
+      System.out.println("É ficheiro?: " + archivos[i].isFile());
     }
   }
 }
