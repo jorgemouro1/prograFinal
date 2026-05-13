@@ -16,7 +16,7 @@ public class AppFicheiros {
         // se o atopa pon o menu
         if (varArchivo.isDirectory()) {
             while (!finalizarMenu) {
-                System.out.println("1. Listar contido");
+                System.out.println("1. Listar contido👌");
                 System.out.println("2. Crear novo directorio");
                 System.out.println("3. Borrar directorio");
                 System.out.println("4. Renomear o directorio");
@@ -28,7 +28,7 @@ public class AppFicheiros {
 
                 switch (opcion) {
                     case 0:
-                        System.out.println("Saíndo...");
+                        System.out.println("Saíndo...👌");
                         finalizarMenu = true;
                         break;
 
@@ -54,7 +54,7 @@ public class AppFicheiros {
                         int contadorDirectorios = 0;
 
                         // contar carpetas
-                        System.out.println("----- Carpetas no directorio -----");
+                        System.out.println("----- Carpetas no directorio 👌 -----");
                         for (int i = 0; i < lista.length; i++) {
                             if (lista[i].isDirectory()) {
                                 contadorDirectorios++;
@@ -72,22 +72,22 @@ public class AppFicheiros {
                     case 2:
                         sc.nextLine();
                         // pasamos o nome e creamos
-                        System.out.print("Introduce o nome do novo directorio: ");
+                        System.out.print("Introduce o nome do novo directorio👌: ");
                         String novoDir = sc.nextLine();
 
                         boolean exito = (new File(novoDir)).mkdir();
                         if (exito) {
-                            System.out.println("Creouse o directorio " + novoDir);
+                            System.out.println("Creouse o directorio " + novoDir + "👌");
                         } else {
-                            System.out.println("Non se puido crear o devandito directorio");
+                            System.out.println("Non se puido crear o devandito directorio😢");
                         }
                         break;
                     case 3:
                         // se está vacío bórrase senon non
                         if (varArchivo.delete()) {
-                            System.out.println(varArchivo + " foi borrado");
+                            System.out.println(varArchivo + " foi borrado👌");
                         } else {
-                            System.out.println("Non se puido borrar, ten cousas dentro");
+                            System.out.println("Non se puido borrar, ten cousas dentro😢");
                         }
                         break;
 
@@ -100,10 +100,10 @@ public class AppFicheiros {
 
                         boolean exitoRename = varArchivo.renameTo(varArchivoNovo);
                         if (exitoRename) {
-                            System.out.println("O nome do directorio foi cambiado");
+                            System.out.println("O nome do directorio foi cambiado👌");
                             varArchivo = varArchivoNovo;
                         } else {
-                            System.out.println("Non se puido cambiar o nome");
+                            System.out.println("Non se puido cambiar o nome😢");
                         }
                         break;
 
@@ -116,14 +116,14 @@ public class AppFicheiros {
 
                         break;
                     default:
-                        System.out.println("Mete un valor correcto");
+                        System.out.println("Mete un valor correcto😡");
                         break;
 
                 }
             }
         } else {
             // se non é un directorio, xa sale
-            System.out.println("Non se atopa o directorio");
+            System.out.println("Non se atopa o directorio😡");
         }
 
         sc.close();
