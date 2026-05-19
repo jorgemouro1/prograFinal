@@ -6,6 +6,7 @@ tamén se lle pide ao usuario, que almacenará a información acerca dos cálcul
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,8 +17,10 @@ public class Contador {
     Scanner sc = new Scanner(System.in);
     System.out.print("Introduce o nome do ficheiro que queres contar: ");
     String nomeArchivo = sc.nextLine();
+
     // creamos o archivo 1, que vai ser de onde imos contar
     File f1 = new File(nomeArchivo);
+
     System.out.print("Introduce o nome do ficheiro para crear: ");
     String nomeNovo = sc.nextLine();
     // creamos a direccion do 2 q é onde imos meter os datos
@@ -46,6 +49,8 @@ public class Contador {
       br.close();
       pw.close();
 
+    } catch (FileNotFoundException e) {
+      System.out.println("Non se atopou o ficheiro");
     } catch (IOException e) {
       System.out.println("Erro de entrada e saída");
     }
