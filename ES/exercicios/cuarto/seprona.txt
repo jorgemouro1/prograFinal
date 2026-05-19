@@ -1,0 +1,2 @@
+Num liñas: 5
+Num caracteres: 11

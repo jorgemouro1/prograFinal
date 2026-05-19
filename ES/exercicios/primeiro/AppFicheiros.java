@@ -1,4 +1,4 @@
-package exercicios.primeiro;
+package primeiro;
 
 import java.io.File;
 import java.util.Scanner;
